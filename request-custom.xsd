@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema
+        xmlns="request-custom"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:beans="http://www.springframework.org/schema/beans"
+        targetNamespace="request-custom"
+        elementFormDefault="qualified"
+>
+    <xsd:import namespace="http://www.springframework.org/schema/beans" />
+
+
+    <xsd:group name="request">
+        <xsd:sequence>
+            <xsd:element type="xsd:boolean" name="active">
+                <xsd:annotation>
+                    <xsd:documentation>开启该请求</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element type="xsd:string" name="type">
+                <xsd:annotation>
+                    <xsd:documentation>哪种类型的测试</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element type="xsd:string" name="url">
+                <xsd:annotation>
+                    <xsd:documentation>测试API地址</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element type="xsd:string" name="body">
+                <xsd:annotation>
+                    <xsd:documentation>测试body</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element type="xsd:string" name="callback">
+                <xsd:annotation>
+                    <xsd:documentation>回调地址</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:group>
+    <xsd:element name="requests">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="id" type="xsd:string" default="requests"/>
+                <xsd:element name="request">
+                    <xsd:complexType>
+                        <xsd:group ref="request"/>
+                    </xsd:complexType>
+                </xsd:element>
+
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>
