@@ -12,8 +12,12 @@
                     <xs:element name="url" type="xs:string" minOccurs="0" msdata:Ordinal="0" />
                     <xs:element name="body" type="xs:string" minOccurs="0" msdata:Ordinal="1" />
                     <xs:element name="callback" type="xs:string" minOccurs="0" msdata:Ordinal="2" />
-                    <xs:element name="minreq" type="xs:string" minOccurs="0" msdata:Ordinal="3" />
-                    <xs:element name="maxreq" type="xs:string" minOccurs="0" msdata:Ordinal="4" />
+                    <xs:element name="minReq" type="xs:string" minOccurs="0" msdata:Ordinal="3" />
+                    <xs:element name="maxReq" type="xs:string" minOccurs="0" msdata:Ordinal="4" />
+                    <xs:element name="instanceId" type="xs:string" minOccurs="0" msdata:Ordinal="5" />
+                    <xs:element name="intervalReq" type="xs:string" minOccurs="0" msdata:Ordinal="6" />
+                    <xs:element name="initSize" type="xs:string" minOccurs="0" msdata:Ordinal="7" />
+                    <xs:element name="schedulerTime" type="xs:string" minOccurs="0" msdata:Ordinal="8" />
                     <xs:element name="property" nillable="true" minOccurs="0" maxOccurs="unbounded">
                       <xs:complexType>
                         <xs:simpleContent msdata:ColumnName="property_Text" msdata:Ordinal="1">
